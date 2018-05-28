@@ -1,16 +1,20 @@
 package com.foolchen.leetcode.samples;
 
-import com.foolchen.leetcode.samples.linkedlist.ListNode;
+import com.foolchen.leetcode.samples.data.ListNode;
+import com.foolchen.leetcode.samples.data.TreeNode;
 import com.foolchen.leetcode.samples.linkedlist.PalindromCase;
+import com.foolchen.leetcode.samples.linkedlist.SymmetricCase;
 
 import static com.foolchen.leetcode.samples.Utils.createLinkedList;
+import static com.foolchen.leetcode.samples.Utils.createTree;
 
 /**
  * @author chenchong. Created on 2018/5/28.
  */
 public class Samples {
   public static void main(String[] args) {
-    isPalindrome();
+    //isPalindrome();
+    isSymmetric();
   }
 
   private static void isPalindrome() {
@@ -34,5 +38,13 @@ public class Samples {
     head = createLinkedList(arr);
     assert palindromCase.isPalindrome(head);
     System.out.println("isPalindrome passed.");
+  }
+
+  private static void isSymmetric() {
+    int[] arr = {1, 2, 2, 3, 4, 4, 3};
+    TreeNode root = createTree(arr);
+    SymmetricCase symmetricCase = new SymmetricCase();
+    boolean result = symmetricCase.isSymmetric(root);
+    assert result;
   }
 }

@@ -1,6 +1,7 @@
 package com.foolchen.leetcode.samples;
 
-import com.foolchen.leetcode.samples.linkedlist.ListNode;
+import com.foolchen.leetcode.samples.data.ListNode;
+import com.foolchen.leetcode.samples.data.TreeNode;
 
 /**
  * @author chenchong. Created on 2018/5/28.
@@ -22,6 +23,24 @@ public class Utils {
       current = current.next;
     }
     return head;
+  }
+
+  public static TreeNode createTree(int[] arr) {
+    int length = arr.length;
+    TreeNode[] nodes = new TreeNode[length];
+    for (int i = 0; i < length; i++) {
+      TreeNode node = new TreeNode(arr[i]);
+      nodes[i] = node;
+      if (i > 0) {
+        TreeNode parent = nodes[(i - 1) / 2];
+        if ((i - 2) % 2 == 0) {
+          parent.left = node;
+        } else {
+          parent.right = node;
+        }
+      }
+    }
+    return nodes[0];
   }
 
   public static String linkedListToString(ListNode node) {

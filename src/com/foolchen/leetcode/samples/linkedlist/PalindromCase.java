@@ -15,6 +15,8 @@ package com.foolchen.leetcode.samples.linkedlist;
 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
  */
 
+import com.foolchen.leetcode.samples.data.ListNode;
+
 /**
  * @author chenchong. Created on 2018/5/28.
  */

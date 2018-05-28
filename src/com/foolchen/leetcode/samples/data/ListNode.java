@@ -1,4 +1,4 @@
-package com.foolchen.leetcode.samples.linkedlist;
+package com.foolchen.leetcode.samples.data;
 
 /**
  * Definition for singly-linked list.
