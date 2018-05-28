@@ -35,4 +35,20 @@ public class Utils {
     builder.append("]");
     return builder.toString();
   }
+
+  /**
+   * 查找链表中的中间节点
+   */
+  public static ListNode findMidNode(ListNode head) {
+    if (head == null) return null;
+    if (head.next == null) return head;
+
+    ListNode p = head, q = head;
+    while (q != null && q.next != null) {
+      p = p.next;
+      q = q.next.next;
+    }
+
+    return p;
+  }
 }
